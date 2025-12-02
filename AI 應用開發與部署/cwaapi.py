@@ -1,10 +1,12 @@
+import json
+
 import flask
 import cwa
 
 with open('env.json', encoding='utf-8') as f:
     env = json.load(f)
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 cwa_key = env['key']
 
